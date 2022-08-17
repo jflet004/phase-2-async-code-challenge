@@ -12,6 +12,7 @@ import { useState, useEffect } from "react"
 function App() {
   const [movies, setMovies] = useState([])
   const [filterByGenre, setFilterByGenre] = useState("")
+  const [search, setSearch] = useState("")
 
 
   useEffect(() => {
@@ -29,8 +30,9 @@ function App() {
   const filteredMovieList = movies.filter(movie => {
     if(filterByGenre === "") return movie
     return movie.genre === filterByGenre
-  }
-  )
+  })
+
+  const searchByTitle = filteredMovieList.filter(movie => movie.title.toLowerCase().includes(search.toLowerCase()))
 
   return (
     <div className="app">
@@ -42,9 +44,11 @@ function App() {
         <Route
           path="/movies"
           element={<MovieContainer
-            movies={filteredMovieList}
+            movies={searchByTitle}
             filterByGenre={filterByGenre}
             onFilterChange={setFilterByGenre}
+            search={search}
+            onSearch={setSearch}
           />}
         />
         <Route
