@@ -11,12 +11,14 @@ import { useState, useEffect } from "react"
 
 function App() {
   const [movies, setMovies] = useState([])
+  const [filterByGenre, setFilterByGenre] = useState("")
+
 
   useEffect(() => {
     fetch("http://localhost:3001/movies")
-    .then(response => response.json())
-    .then(data => setMovies(data))
-    .catch(error => alert(error))
+      .then(response => response.json())
+      .then(data => setMovies(data))
+      .catch(error => alert(error))
   }, [])
 
   const handleAddMovie = (newMovie) => {
@@ -24,14 +26,35 @@ function App() {
     setMovies(updatedMovieList)
   }
 
+  const filteredMovieList = movies.filter(movie => {
+    if(filterByGenre === "") return movie
+    return movie.genre === filterByGenre
+  }
+  )
+
   return (
     <div className="app">
       <Routes>
-        <Route exact path="/" element={<Home/>}/>
-        <Route path="/movies" element={<MovieContainer movies={movies}/>}/>
-        <Route path="/movies/new" element={<MovieForm onAddMovie={handleAddMovie}/>}/>
+        <Route
+          exact path="/"
+          element={<Home />}
+        />
+        <Route
+          path="/movies"
+          element={<MovieContainer
+            movies={filteredMovieList}
+            filterByGenre={filterByGenre}
+            onFilterChange={setFilterByGenre}
+          />}
+        />
+        <Route
+          path="/movies/new"
+          element={<MovieForm
+            onAddMovie={handleAddMovie}
+          />}
+        />
       </Routes>
-      
+
     </div>
   );
 }
