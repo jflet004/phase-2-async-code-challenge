@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom"
 
 function MovieForm({ onAddMovie }) {
   const [title, setTitle] = useState("")
@@ -9,7 +10,7 @@ function MovieForm({ onAddMovie }) {
 
   const handleMovieSubmit = e => {
     e.preventDefault()
-    
+
     const movieObj = {
       title,
       description,
@@ -26,13 +27,14 @@ function MovieForm({ onAddMovie }) {
       body: JSON.stringify(movieObj)
     })
       .then(response => response.json())
-      .then(data => {onAddMovie(data)})
+      .then(data => onAddMovie(data))
       .catch(error => alert(error))
 
     setTitle("")
     setGenre("")
     setImage("")
     setDescription("")
+    setWatched("")
 
   }
 
@@ -58,7 +60,7 @@ function MovieForm({ onAddMovie }) {
         <input
           type="checkbox"
           name="genre"
-          value={watched}
+          checked={watched}
           onChange={e => setWatched(e.target.checked)}
         />
       </label><br />
@@ -79,6 +81,7 @@ function MovieForm({ onAddMovie }) {
         type="submit"
         value="Add Movie"
       />
+      <Link to="/movies" exact>Return to Movie List</Link>
     </form>
   );
 }

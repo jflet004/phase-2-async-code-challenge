@@ -7,6 +7,8 @@ export default function Home() {
         <h1>Welcome to Watchlist!</h1>
         {/* Add link to "/movies" 
         Add link to /movies/new  */}
+        <Link to="/movies" exact>Movie List</Link><br/>
+        <Link to="/movies/new" exact>Add Movie</Link>
     </div>
     
   )

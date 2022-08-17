@@ -8,13 +8,10 @@ import {
 } from "react-router-dom";
 import { useState, useEffect } from "react"
 
-
 function App() {
   const [movies, setMovies] = useState([])
   const [filterByGenre, setFilterByGenre] = useState("")
   const [search, setSearch] = useState("")
-  // const [isWatched, setIsWatched] = useState(false)
-
 
   useEffect(() => {
     fetch("http://localhost:3001/movies")
@@ -23,17 +20,17 @@ function App() {
       .catch(error => alert(error))
   }, [])
 
-  const handleAddMovie = (newMovie) => {
-    const updatedMovieList = [...movies, newMovie]
-    setMovies(updatedMovieList)
-  }
-
   const filteredMovieList = movies.filter(movie => {
     if (filterByGenre === "") return movie
     return movie.genre === filterByGenre
   })
 
   const searchByTitle = filteredMovieList.filter(movie => movie.title.toLowerCase().includes(search.toLowerCase()))
+
+  const handleAddMovie = (newMovie) => {
+    const updatedMovieList = [...movies, newMovie]
+    setMovies(updatedMovieList)
+  }
 
   const handleWatchUpdate = (watchedMovie) => {
     const updatedMovies = searchByTitle.map(movie => {
