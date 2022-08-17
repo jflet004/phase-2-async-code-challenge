@@ -19,12 +19,17 @@ function App() {
     .catch(error => alert(error))
   }, [])
 
+  const handleAddMovie = (newMovie) => {
+    const updatedMovieList = [...movies, newMovie]
+    setMovies(updatedMovieList)
+  }
+
   return (
     <div className="app">
       <Routes>
         <Route exact path="/" element={<Home/>}/>
         <Route path="/movies" element={<MovieContainer movies={movies}/>}/>
-        <Route path="/movies/new" element={<MovieForm/>}/>
+        <Route path="/movies/new" element={<MovieForm onAddMovie={handleAddMovie}/>}/>
       </Routes>
       
     </div>

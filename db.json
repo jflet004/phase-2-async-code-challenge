@@ -1,31 +1,43 @@
 {
-    "movies": [{
-        "id": 1,
-        "title": "Avengers: Infinity War",
-        "description": "Iron Man, Thor, the Hulk and the rest of the Avengers unite to battle their most powerful enemy yet -- the evil Thanos. On a mission to collect all six Infinity Stones, Thanos plans to use the artifacts to inflict his twisted will on reality. The fate of the planet and existence itself has never been more uncertain as everything the Avengers have fought for has led up to this moment.",
-        "genre": "Action",
-        "watched": false,
-        "image": "https://static.wikia.nocookie.net/marvelcinematicuniverse/images/1/11/Avengers_Infinity_war_poster.jpeg/revision/latest/top-crop/width/360/height/360?cb=20180316141550"
-    }, {
-        "id": 2,
-        "title": "Dirty Dancing",
-        "description": "Baby (Jennifer Grey) is one listless summer away from the Peace Corps. Hoping to enjoy her youth while it lasts, she's disappointed when her summer plans deposit her at a sleepy resort in the Catskills with her parents. Her luck turns around, however, when the resort's dance instructor, Johnny (Patrick Swayze), enlists Baby as his new partner, and the two fall in love. Baby's father forbids her from seeing Johnny, but she's determined to help him perform the last big dance of the summer.",
-        "genre": "Drama",
-        "watched": false,
-        "image": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRNW6q8_64jw29juQdLCtv4JlVf5LaW9UQ5ULxpDRd3tnzmaQ9d"
-    }, {
-        "id": 3,
-        "title": "The Shining",
-        "description": "Jack Torrance (Jack Nicholson) becomes winter caretaker at the isolated Overlook Hotel in Colorado, hoping to cure his writer's block. He settles in along with his wife, Wendy (Shelley Duvall), and his son, Danny (Danny Lloyd), who is plagued by psychic premonitions. As Jack's writing goes nowhere and Danny's visions become more disturbing, Jack discovers the hotel's dark secrets and begins to unravel into a homicidal maniac hell-bent on terrorizing his family.",
-        "genre": "Horror",
-        "watched": false,
-        "image": "https://static.independent.co.uk/s3fs-public/thumbnails/image/2020/05/21/09/the-shining-2.jpg?quality=75&width=1200&auto=webp"
-    }, {
-        "id": 4,
-        "title": "Monty Python and the Holy Grail",
-        "description": "A comedic send-up of the grim circumstances of the Middle Ages as told through the story of King Arthur and framed by a modern-day murder investigation. When the mythical king of the Britons leads his knights on a quest for the Holy Grail, they face a wide array of horrors, including a persistent Black Knight, a three-headed giant, a cadre of shrubbery-challenged knights, the perilous Castle Anthrax, a killer rabbit, a house of virgins, and a handful of rude Frenchmen.",
-        "genre": "Comedy",
-        "watched": false,
-        "image": "https://i.guim.co.uk/img/media/7a1f6954c6d25f343fd20c7e53ccd772a5aadef3/0_335_3234_1940/master/3234.jpg?width=620&quality=85&fit=max&s=24a4b574355211917ac0d77c19e0793b"
-    }]
+  "movies": [
+    {
+      "id": 1,
+      "title": "Avengers: Infinity War",
+      "description": "Iron Man, Thor, the Hulk and the rest of the Avengers unite to battle their most powerful enemy yet -- the evil Thanos. On a mission to collect all six Infinity Stones, Thanos plans to use the artifacts to inflict his twisted will on reality. The fate of the planet and existence itself has never been more uncertain as everything the Avengers have fought for has led up to this moment.",
+      "genre": "Action",
+      "watched": false,
+      "image": "https://static.wikia.nocookie.net/marvelcinematicuniverse/images/1/11/Avengers_Infinity_war_poster.jpeg/revision/latest/top-crop/width/360/height/360?cb=20180316141550"
+    },
+    {
+      "id": 2,
+      "title": "Dirty Dancing",
+      "description": "Baby (Jennifer Grey) is one listless summer away from the Peace Corps. Hoping to enjoy her youth while it lasts, she's disappointed when her summer plans deposit her at a sleepy resort in the Catskills with her parents. Her luck turns around, however, when the resort's dance instructor, Johnny (Patrick Swayze), enlists Baby as his new partner, and the two fall in love. Baby's father forbids her from seeing Johnny, but she's determined to help him perform the last big dance of the summer.",
+      "genre": "Drama",
+      "watched": false,
+      "image": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRNW6q8_64jw29juQdLCtv4JlVf5LaW9UQ5ULxpDRd3tnzmaQ9d"
+    },
+    {
+      "id": 3,
+      "title": "The Shining",
+      "description": "Jack Torrance (Jack Nicholson) becomes winter caretaker at the isolated Overlook Hotel in Colorado, hoping to cure his writer's block. He settles in along with his wife, Wendy (Shelley Duvall), and his son, Danny (Danny Lloyd), who is plagued by psychic premonitions. As Jack's writing goes nowhere and Danny's visions become more disturbing, Jack discovers the hotel's dark secrets and begins to unravel into a homicidal maniac hell-bent on terrorizing his family.",
+      "genre": "Horror",
+      "watched": false,
+      "image": "https://static.independent.co.uk/s3fs-public/thumbnails/image/2020/05/21/09/the-shining-2.jpg?quality=75&width=1200&auto=webp"
+    },
+    {
+      "id": 4,
+      "title": "Monty Python and the Holy Grail",
+      "description": "A comedic send-up of the grim circumstances of the Middle Ages as told through the story of King Arthur and framed by a modern-day murder investigation. When the mythical king of the Britons leads his knights on a quest for the Holy Grail, they face a wide array of horrors, including a persistent Black Knight, a three-headed giant, a cadre of shrubbery-challenged knights, the perilous Castle Anthrax, a killer rabbit, a house of virgins, and a handful of rude Frenchmen.",
+      "genre": "Comedy",
+      "watched": false,
+      "image": "https://i.guim.co.uk/img/media/7a1f6954c6d25f343fd20c7e53ccd772a5aadef3/0_335_3234_1940/master/3234.jpg?width=620&quality=85&fit=max&s=24a4b574355211917ac0d77c19e0793b"
+    },
+    {
+      "title": "Home Alone",
+      "description": "Kid is abandoned",
+      "genre": "Comedy",
+      "image": "https://m.media-amazon.com/images/M/MV5BMzFkM2YwOTQtYzk2Mi00N2VlLWE3NTItN2YwNDg1YmY0ZDNmXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_FMjpg_UX1000_.jpg",
+      "id": 5
+    }
+  ]
 }
