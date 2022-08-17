@@ -5,6 +5,7 @@ function MovieForm({ onAddMovie }) {
   const [genre, setGenre] = useState("")
   const [image, setImage] = useState("")
   const [description, setDescription] = useState("")
+  const [watched, setWatched] = useState(false)
 
   const handleMovieSubmit = e => {
     e.preventDefault()
@@ -13,7 +14,8 @@ function MovieForm({ onAddMovie }) {
       title,
       description,
       genre,
-      image
+      image,
+      watched
     }
 
     fetch("http://localhost:3001/movies", {
@@ -24,7 +26,7 @@ function MovieForm({ onAddMovie }) {
       body: JSON.stringify(movieObj)
     })
       .then(response => response.json())
-      .then(data => onAddMovie(data))
+      .then(data => {onAddMovie(data)})
       .catch(error => alert(error))
 
     setTitle("")
@@ -56,6 +58,8 @@ function MovieForm({ onAddMovie }) {
         <input
           type="checkbox"
           name="genre"
+          value={watched}
+          onChange={e => setWatched(e.target.checked)}
         />
       </label><br />
       <input

@@ -13,6 +13,7 @@ function App() {
   const [movies, setMovies] = useState([])
   const [filterByGenre, setFilterByGenre] = useState("")
   const [search, setSearch] = useState("")
+  // const [isWatched, setIsWatched] = useState(false)
 
 
   useEffect(() => {
@@ -34,6 +35,14 @@ function App() {
 
   const searchByTitle = filteredMovieList.filter(movie => movie.title.toLowerCase().includes(search.toLowerCase()))
 
+  const handleWatchUpdate = (watchedMovie) => {
+    const updatedMovies = searchByTitle.map(movie => {
+      if(movie.id === watchedMovie.id) return watchedMovie
+      return movie
+    })
+    setMovies(updatedMovies)
+  }
+
   return (
     <div className="app">
       <Routes>
@@ -49,12 +58,15 @@ function App() {
             onFilterChange={setFilterByGenre}
             search={search}
             onSearch={setSearch}
+            onUpdateWatchStatus={handleWatchUpdate}
           />}
         />
         <Route
           path="/movies/new"
           element={<MovieForm
             onAddMovie={handleAddMovie}
+            // isWatched={isWatched}
+            // setIsWatched={setIsWatched}
           />}
         />
       </Routes>
