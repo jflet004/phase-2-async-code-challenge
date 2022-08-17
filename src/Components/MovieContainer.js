@@ -12,7 +12,6 @@ function MovieContainer({ movies }) {
       <h1>Watchlist</h1>
       <Search /><br/>
       <Filter />
-      {/* render a list of <MovieCard> components in here */} 
       {movieList}
     </div>
   );
