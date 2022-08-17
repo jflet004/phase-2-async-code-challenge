@@ -28,7 +28,7 @@ function App() {
   }
 
   const filteredMovieList = movies.filter(movie => {
-    if(filterByGenre === "") return movie
+    if (filterByGenre === "") return movie
     return movie.genre === filterByGenre
   })
 

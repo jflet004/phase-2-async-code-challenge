@@ -38,6 +38,13 @@
       "genre": "Comedy",
       "image": "https://m.media-amazon.com/images/M/MV5BMzFkM2YwOTQtYzk2Mi00N2VlLWE3NTItN2YwNDg1YmY0ZDNmXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_FMjpg_UX1000_.jpg",
       "id": 5
+    },
+    {
+      "title": "The Conjuring",
+      "description": "Spooky house. Spooky plot",
+      "genre": "Horror",
+      "image": "https://m.media-amazon.com/images/M/MV5BMTM3NjA1NDMyMV5BMl5BanBnXkFtZTcwMDQzNDMzOQ@@._V1_FMjpg_UX1000_.jpg",
+      "id": 6
     }
   ]
 }
