@@ -43,6 +43,11 @@ function App() {
     setMovies(updatedMovies)
   }
 
+  const handleDeleteMovie = deletedMovie => {
+    const updatedMovies = searchByTitle.filter(movie => movie.id !== deletedMovie)
+    setMovies(updatedMovies)
+  }
+
   return (
     <div className="app">
       <Routes>
@@ -59,6 +64,7 @@ function App() {
             search={search}
             onSearch={setSearch}
             onUpdateWatchStatus={handleWatchUpdate}
+            onDeleMovie={handleDeleteMovie}
           />}
         />
         <Route

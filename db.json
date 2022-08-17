@@ -13,7 +13,7 @@
       "title": "Dirty Dancing",
       "description": "Baby (Jennifer Grey) is one listless summer away from the Peace Corps. Hoping to enjoy her youth while it lasts, she's disappointed when her summer plans deposit her at a sleepy resort in the Catskills with her parents. Her luck turns around, however, when the resort's dance instructor, Johnny (Patrick Swayze), enlists Baby as his new partner, and the two fall in love. Baby's father forbids her from seeing Johnny, but she's determined to help him perform the last big dance of the summer.",
       "genre": "Drama",
-      "watched": true,
+      "watched": false,
       "image": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRNW6q8_64jw29juQdLCtv4JlVf5LaW9UQ5ULxpDRd3tnzmaQ9d"
     },
     {
@@ -31,14 +31,6 @@
       "genre": "Comedy",
       "watched": false,
       "image": "https://i.guim.co.uk/img/media/7a1f6954c6d25f343fd20c7e53ccd772a5aadef3/0_335_3234_1940/master/3234.jpg?width=620&quality=85&fit=max&s=24a4b574355211917ac0d77c19e0793b"
-    },
-    {
-      "title": "The Lord of the Rings",
-      "description": "One ring to rule them all. Destroy it!",
-      "genre": "Action",
-      "image": "https://m.media-amazon.com/images/M/MV5BN2EyZjM3NzUtNWUzMi00MTgxLWI0NTctMzY4M2VlOTdjZWRiXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1_.jpg",
-      "watched": false,
-      "id": 5
     }
   ]
 }

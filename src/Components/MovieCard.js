@@ -3,7 +3,7 @@ import { useState } from 'react'
 import Comments from './Comments'
 import "../Components/MovieCard.css"
 
-function MovieCard({ title, genre, description, image, id, onUpdateWatchStatus, watched }) {
+function MovieCard({ title, genre, description, image, id, onUpdateWatchStatus, onDeleteMovie, watched }) {
   const [comments, setComments] = useState([])
   const [isWatched, setIsWatched] = useState(watched)
 
@@ -22,8 +22,21 @@ function MovieCard({ title, genre, description, image, id, onUpdateWatchStatus, 
     setIsWatched(!isWatched)
   }
 
+  const handleDelete = () => {
+    fetch(`http://localhost:3001/movies/${id}`, {
+      method: "DELETE"
+    })
+    .then(response => response.json())
+    .then(() => onDeleteMovie(id))
+  }
+
   return (
     <div>
+      <br/>
+      <button 
+        style={{padding: "3px"}}
+        onClick={handleDelete}
+      >x</button>
       <h3>{title}</h3>
       <img src={image} alt="movie image"/>
       <p>{genre}</p>
@@ -34,7 +47,7 @@ function MovieCard({ title, genre, description, image, id, onUpdateWatchStatus, 
       <Comments 
         comments={comments} 
         setComments={setComments}
-      />
+      /><br/>
     </div>
   );
 }

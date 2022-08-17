@@ -3,12 +3,13 @@ import MovieCard from "./MovieCard";
 import Filter from "./Filter";
 import Search from "./Search";
 
-function MovieContainer({ movies, filterByGenre, onFilterChange, search, onSearch, onUpdateWatchStatus }) {
+function MovieContainer({ movies, filterByGenre, onFilterChange, search, onSearch, onUpdateWatchStatus, onDeleMovie }) {
 
   const movieList = movies.map(movie =>
     <MovieCard
       key={movie.id}
       onUpdateWatchStatus={onUpdateWatchStatus}
+      onDeleteMovie={onDeleMovie}
       {...movie}
     />)
 
