@@ -34,7 +34,7 @@ function App() {
 
   const handleWatchUpdate = (watchedMovie) => {
     const updatedMovies = searchByTitle.map(movie => {
-      if(movie.id === watchedMovie.id) return watchedMovie
+      if (movie.id === watchedMovie.id) return watchedMovie
       return movie
     })
     setMovies(updatedMovies)
@@ -68,8 +68,6 @@ function App() {
           path="/movies/new"
           element={<MovieForm
             onAddMovie={handleAddMovie}
-            // isWatched={isWatched}
-            // setIsWatched={setIsWatched}
           />}
         />
       </Routes>
